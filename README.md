@@ -1,13 +1,24 @@
-# Barista POS App
+# Barista // Coffee Shop App
 Our team made a point of sales system/ full-stack applciation. A cashier can take a customers order and then the order get sends to a queue where Baristas are able to login and see the pending orders. Once complete Baristas can check off the order and it gets sent to the completed que. Baristas can cancel and order as well in the even that's needed. 
 
-Creating an Order: 
-![coffee](https://j.gifs.com/K8Bgmn.gif)
+Homepage: 
+![coffee](https://i.imgur.com/aCsgyfV.png)
+
+Create an order:
+
+![create order](https://i.imgur.com/9trLClH.png)
+
+Barista Login: 
+
+![login](https://i.imgur.com/PtktyFO.png)
 
 
-Barista Login // Queue // Profile
+Barista Queue // Profile
 
-![coffee](https://imgur.com/a/zsKRH30)
+![coffee](https://i.imgur.com/K0btbTz.png)
+
+![coffee](https://i.imgur.com/ZOhFTKv.png)
+
 
 ## Installation
 
