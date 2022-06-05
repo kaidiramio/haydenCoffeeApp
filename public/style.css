@@ -1,0 +1,200 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+}
+img{
+  height: 200px;
+}
+
+.indexLanding{
+  background: rgb(239, 217, 193);
+}
+
+.btn-default:hover{
+  background: rgb(239, 217, 193);
+}
+
+.baristaL{
+  margin-top: 8px;
+}
+
+.jumbotron.text-center{
+  background: white;
+}
+
+.jumbotron{
+  background: white;
+}
+
+.index{
+ margin-bottom: 2%;
+}
+
+.prof{
+  font-size: 2rem;
+}
+
+.row.container{
+  margin-left: 12%;
+  margin-top: 15px;
+}
+
+/******* Index.ejs styling ******/
+#indexLanding{
+  background-image: url(dumbbell.jpg) !important;
+}
+
+/******** Ordersystem.ejs styling *****/
+
+/* #orderSystem */
+.orderSys{
+  margin-top: 3%;
+  width: 100%;
+}
+
+.orderSystem{
+  background: url(https://img.freepik.com/free-photo/coffee-beans-top-view-white-background-space-text_176474-5028.jpg?w=2000);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 25px;
+}
+
+.orderNav{
+  margin-top: 20px;
+}
+
+.btn-lg{
+  margin-top: 2%;
+}
+
+.orderPG{
+  background: rgba(0, 0, 0, 0.671);
+  color: white;
+  height: auto;
+}
+
+.topH{
+  height: 65px;
+}
+
+.orderS{
+  margin: 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  
+}
+
+.coffeeBoxes{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.well.check{
+  height: auto;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 0px 4px 4px rgba(32, 32, 32, 0.274);
+  border-radius: 20px;
+
+}
+
+.well{
+  box-shadow: 2px 2px 2px 2px black;
+}
+
+label{
+  margin-right: 25px
+}
+
+/* .addOns{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.sizes{
+  padding-left: 10%;
+  padding-right: 11%;
+
+} */
+
+h4{
+  font-style: italic;
+  font-size: 2.2rem;
+}
+
+input{
+  margin-bottom: 10px;
+}
+
+legend{
+  font-weight: bold;
+}
+
+
+/******** BARISTA PAGE *******/
+
+
+.orderList{
+  padding-left: 0px;
+  width: 100%;
+  background: white;
+}
+
+
+li{
+  list-style: none;
+  text-align: left;
+  padding-left: 2%;
+}
+
+
+h2{
+  text-align: left;
+  padding-left: 10px;
+}
+
+
+.fa.fa-check, .fa.fa-trash-o{
+  font-size: 2.6rem;
+  margin-left: 5%; 
+}
+
+.well.complete{
+  height: auto;
+  width: auto;
+  background: white;
+  box-shadow: 0px 0px 4px 4px rgba(32, 32, 32, 0.274);
+  border-radius: 20px;
+
+}
+
+.column{
+  width: 50%;
+  margin-left: 50%;
+}
+
+.col{
+  width: 85;
+}
+
+/* colors for complete/not complete */
+.baristaComplete{
+  text-align: left;
+  padding-left: 2%;
+  font-size: 2.3rem;
+  color: green;
+}
+
+.customerN{
+  color: red;
+}
+
+.completedGreen{
+  width: 50%;
+}
+
+#reminder{
+  font-size: 2.4rem;
+}

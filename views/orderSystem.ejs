@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>HaydenBucks Coffee Shop</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="orderSystem">
+    <section class="container orderS">
+        <section class="page-header text-center orderPG">
+            <!-- <a href="/logout" class="btn btn-default btn-sm">Logout</a> -->
+            <h1 class="topH">Start Order</h1>
+            <!-- <span>Pending Orders: 0</span> -->
+
+            <nav class="orderNav">
+                <a href="/" class="btn btn-default btn-sm">Home</a>
+                <a href="/login" class="btn btn-default btn-sm"><span class="fa fa-user"></span> Barista Login</a>
+                <a href="/signup" class="btn btn-default btn-sm"><span class="fa fa-user"></span> Barista Signup</a>
+            </nav>
+        </section>
+    </section>
+
+    <section class="container text-center">
+
+        <!-- LOCAL INFORMATION -->
+        <section class="row">
+            <section class="col-sm-4 coffeeBoxes">
+                <section class="well check">
+                    <form action="/submitOrder" method="POST" role="form">
+                        <legend>Customer Name</legend>
+                        <label for="">
+                            Customer Name:
+                            <input required type="text" name="customerName">
+                        </label>
+                        
+                        <!--                     
+                        <fieldset>
+                            <legend>Date:</legend>
+                            <input type="date" placeholder="Enter date" name="date" required>
+                            Add date object for this to autofill
+                        </fieldset> -->
+                        <section>
+                            <fieldset class="orderSys">
+                                <legend>Beverage</legend>
+
+                                
+                                <input type="radio" name="beverage" id="Coffee" value="Coffee"><label for="Coffee">Coffee</label>
+
+                                <input type="radio" name="beverage" id="Cappuccino" value="Cappuccino"><label for="Cappuccino">Cappuccino</label>
+
+                                <input type="radio" name="beverage" id="Latte" value="Latte"><label for="Latte">Latte</label>
+                                
+                                <input type="radio" name="beverage" id="hawaiiKona" value="Hawaii Kona"><label for="hawaiiKona">Hawaii Kona</label>
+
+                                <input required type="radio" name="beverage" id="tanzaniaPeaberry" value="Tanzania Peaberry"><label for="tanzaniaPeaberry">Tanzania Peaberry</label>
+
+                                <input type="radio" name="beverage" id="kopiLuwac" value="Kopi Luwac"><label for="kopiLuwac">Kopi Luwac</label>
+
+                                <input type="radio" name="beverage" id="black" value="Black"><label for="Black">Black Coffee</label>
+
+                                <input type="radio" name="beverage" id="none" value="No Drink"><label for="none">None</label>
+                            </fieldset>
+                        </section>
+
+                        <section class="addOns sizes">
+                            <fieldset class="orderSys">
+                                <legend>Size</legend>
+
+                                <input required type="radio" name="size" id="tall" value="Tall"><label for="tall">Tall</label>
+
+                                <input type="radio" name="size" id="grande" value="Grande"><label for="grande">Grande</label>
+                               
+                                <input type="radio" name="size" id="venti" value="Venti"><label for="venti">Venti</label>
+
+                            </fieldset>
+                        </section>
+
+                        <!-- <br> -->
+                        <section>
+                            <fieldset class="orderSys">
+                                <legend>Hot/Iced</legend>
+                                
+                                <input required type="radio" name="temperature" value="Hot"><label for="hot">Hot</label>
+
+                                <input required type="radio" name="temperature" value="Iced"><label for="Iced">Iced</label>
+
+                            </fieldset>
+                        </section>
+
+                        <section>
+                            <fieldset class="orderSys">
+                                <section>
+                                    <legend>Add-Ons</legend>
+
+                                    <h4>Espresso Options:</h4>
+                                    <input type="radio" name="espresso" value="Espresso Shot x1"><label for="Espresso Shot x1">Espresso Shot x1</label>
+
+                                    <input type="radio" name="espresso" value="Espresso Shot x2"><label for="Espresso Shot x2">Espresso Shot x2</label>
+
+                                    <input type="radio" name="espresso" value="Espresso Shot x3"><label for="Espresso Shot x3">Espresso Shot x3</label>
+
+                                    <input type="radio" name="espresso" value="Espresso Shot x4"><label for="Espresso Shot x4">Espresso Shot x4</label>
+
+                                    <input type="radio" name="espresso" value="No Espresso" checked><label for="None">None</label>
+
+                                    <h4>Sugar:</h4>
+                                    <input required type="radio" name="sugar" value="No Sugar"><label for="No Sugar">No Sugar</label>
+                                    
+                                    <input type="radio" name="sugar" value="Light"><label for="Light">Light</label>
+                                    
+                                    <input type="radio" name="sugar" value="Regular"><label for="regular">Regular</label>
+                                    
+                                    <input type="radio" name="sugar" value="Extra"><label for="extra">Extra</label>
+                                  
+                                    <h4>Flavor:</h4>
+
+                                    <input type="radio" name="flavor" value="No Flavor"><label for="Flavor">None</label>
+                                    
+                                    <input required type="radio" name="flavor" value="Caramel"><label for="Caramel">Caramel</label>
+                                    
+                                    
+                                    <input type="radio" name="flavor" value="Mocha"><label for="Mocha">Mocha</label>
+                                    
+                                    
+                                    <input type="radio" name="flavor" value="Vanilla"><label for="Vanilla">French Vanilla</label>
+
+                                    <input type="radio" name="flavor" value="Hazlenut"><label for="Hazlenut">Hazlenut</label>
+
+                                    <input type="radio" name="flavor" value="No Flavor" checked><label for="None">None</label>
+
+                                    <h4>Milk Options:</h4>
+                                    
+                                    <input required type="radio" name="milkOptions" value="No Milk" checked><label for="No Milk">No Milk</label>
+                                    
+                                    
+                                    <input type="radio" name="milkOptions" value="Whole Milk"><label for=" Whole Milk"> Whole Milk</label>
+                                           
+                                    <input type="radio" name="milkOptions" value="Lowfat Milk"><label for="Lowfat Milk">Lowfat Milk</label>
+                                    
+                                    <input type="radio" name="milkOptions" value="Oat Milk"><label for="Oat Milk">Oat Milk</label>
+                                                         
+                                    <input type="radio" name="milkOptions" value="Almond Milk"><label for="Almond Milk">Almond Milk</label>
+                                    
+                                    <input type="radio" name="milkOptions" value="Light cream"><label for="Light Cream">Light Cream</label>
+                                </section>
+                            </fieldset>
+                        </section>
+
+                        <section>
+                            <fieldset class="orderSys">
+                                <legend> Note:</legend>
+
+                                <textarea name="note" placeholder="Note" cols="20" rows="3"></textarea>
+                            </fieldset>
+                            
+                            <!-- <label for="submit"></label> -->
+                            <!-- <input type="submit" name="Submit" id="submit"> -->
+                            <p><button class="btn btn-default btn-lg" type="submit" name="Submit" id="submit">Place Order</button></p>
+                        
+                        </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script src="/main.js"></script>
+
+</body>
+
+</html>

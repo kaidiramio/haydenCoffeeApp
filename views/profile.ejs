@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <title>HaydenBucks Coffee Shop</title>
+   
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="orderSystem">
+        <section class="container">
+            <section class="page-header text-center orderPG">
+                <h1>Profile</h1>
+                <p id="reminder">Check out your profile, unlink your account, or try out a random coffee fact! If you need to update information please email us at <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span> Mokasupport@mokacoffee.com</p>
+
+                <nav class="orderNav">
+                    <!-- <a href="/" class="btn btn-default btn-sm">Home</a> -->
+                    <a href="/barista" class="btn btn-default btn-sm"><span class="fa fa-user"></span> Order Que</a>
+                    <a href="/logout" class="btn btn-default btn-sm"><span class="fa fa-user"></span> Logout</a>
+                </nav>
+            </section>
+        </section>
+
+        <div class="row container">
+            <!-- LOCAL INFORMATION -->
+            <div class="col-sm-6">
+                <div class="well">
+                    <% if (user.local.email) { %>
+                        <h3><span class="fa fa-user"></span> Welcome, <%= user.local.firstName %>!</h3>
+                            <p class="prof">
+                                <strong class="hide">id</strong><span class="hide"> <%= user._id %></span><br>
+                                <strong>First Name</strong>: <%= user.local.firstName %><br>
+                                <strong>Last Name</strong>: <%= user.local.lastName %><br>
+                                <strong>email</strong>: <%= user.local.email %><br>
+                                <strong>password</strong>: <%= user.local.password %>
+                            </p>
+
+                            <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                        <% } else { %>
+                            <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                    <% } %>
+
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="well">
+                    <p class="prof">Wanna learn more about Coffee? Press the button below to reveal a random fact!</p>
+                    <p><button id="getCoffeeFact" type="submit">GET</button></p>
+
+                    <h3 id="displayFact"></h3>
+
+                </div>
+            </div>
+        </div>
+            
+<script src="profile.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

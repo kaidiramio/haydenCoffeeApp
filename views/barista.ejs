@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>HaydenBucks Coffee Shop</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="orderSystem">
+    <section class="container">
+        <section class="page-header text-center orderPG">
+            <h1>Orders Queue</h1>
+            <p id="reminder">Please remember to mark an order done once completed <span><i class="fa fa-check-square-o" aria-hidden="true"></i></span></p>
+
+            <nav class="orderNav">
+                <!-- <a href="/" class="btn btn-default btn-sm">Home</a> -->
+                <a href="/profile" class="btn btn-default btn-sm"><span class="fa fa-user"></span> Profile</a>
+                <a href="/logout" class="btn btn-default btn-sm"><span class="fa fa-user"></span> Logout</a>
+            </nav>
+        </section>
+    </section>
+
+    <section class="container text-center">
+        <!-- LOCAL INFORMATION -->
+
+        <!-- orders that come through -->
+        <section class="row">
+            <section class="col">
+                
+                <section>
+                <% for(let i=0; i<orders.length; i++) {
+                    if (orders[i].complete === false) { %>
+                        <section id="<%=orders[i]._id%>">
+                            <section id="<%=orders[i].complete%>">
+                                <ul class="orderList well check">
+                                    <h2>Pending Order</h2>
+                                    <li><h4 class="customerN">Order for <span id="customerName"><%= orders[i].customerName %></span></h4>
+                                    </li>
+                                    <li><span>Size:</span>
+                                        <%= orders[i].size %>
+                                    </li>
+                                    <li><span>Beverage:</span>
+                                        <%= orders[i].beverage %>
+                                    </li>
+                                    <li><span>Temp:</span>
+                                        <%= orders[i].temperature %>
+                                    </li>
+                                    <li><span>Espresso:</span>
+                                        <%= orders[i].espresso %>
+                                    </li>
+                                    <li><span>Sugar</span>
+                                        <%= orders[i].sugar %>
+                                    </li>
+                                    <li><span>Flavor</span>
+                                        <%= orders[i].flavor %>
+                                    </li>
+                                    <li><span>Milk</span>
+                                        <%= orders[i].milkOptions %>
+                                    </li>
+
+                                    <%if(orders[i].note !== ''){%>
+                                        <li><span>Note</span>
+                                        <%= orders[i].note%>
+                                    </li>
+                                    <% } %>
+                                
+                                    <span><i id="speak" class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                </ul>
+                            </section>
+                        </section>
+                </section>
+                <% }} %>
+            </section>
+
+            <!-- Section for orders once complete - loops thru array (last element is length of the array -1) ; conditional for completion  -->
+
+            <section class="col">
+                <section class="completedGreen">
+                    <span><%orders[orders.length-1].customerName%></span>
+                    <% for(let i=0; i<orders.length; i++) {
+                        if (orders[i].complete === true) { %>
+                            <section id="<%=orders[i]._id%>">
+                                <section id="<%=orders[i].complete%>">
+                                    <ul class="orderList well check">
+                                        <h2>Completed Order</h2>
+                                        <h3 class="baristaComplete">Order completed by  <%= orders[i].thisUser %></h3>
+
+                                        <li><h4>Order for <span id="customerName"><%= orders[i].customerName %></span></h4></li>
+                                        <li><span>Size:</span>
+                                            <%= orders[i].size %>
+                                        </li>
+                                        <li><span>Beverage:</span>
+                                            <%= orders[i].beverage %>
+                                        </li>
+                                        <li><span>Temp:</span>
+                                            <%= orders[i].temperature %>
+                                        </li>
+                                        <li><span>Espresso:</span>
+                                            <%= orders[i].espresso %>
+                                        </li>
+                                        <li><span>Sugar</span>
+                                            <%= orders[i].sugar %>
+                                        </li>
+                                        <li><span>Flavor</span>
+                                            <%= orders[i].flavor %>
+                                        </li>
+                                        <li><span>Milk</span>
+                                            <%= orders[i].milkOptions %>
+                                        </li>
+                                        <li><span>Note</span>
+                                            <%= orders[i].note %>
+                                        </li>
+                                        <span><i class="fa fa-check" aria-hidden="true"></i></span>
+                                        <span><i  class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                    </ul>
+                                </section>
+                            </section>
+                    <% }} %>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script src="/main.js"></script>
+
+</body>
+
+</html>
